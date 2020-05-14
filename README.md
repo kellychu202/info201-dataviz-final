@@ -35,13 +35,13 @@ _Projects related to this domain:_
 - **Observations and Features:** 1000 rows and 17 columns
 - **Above questions that can be answered:** 1 can be answered
 
-#### Music Artists Popularity
+#### Billboard yearly top 100
 
-- **URL:** [Kaggle](https://www.kaggle.com/pieca111/music-artists-popularity?select=artists.csv)
-- **Source:** Data collected by [Musicbrainz,](http://organizeyourmusic.playlistmachinery.com/) an open-source music encyclopedia
-- **Description:** The dataset contains the country of origin and popularity of over 1.4 million artists. Popularity is measured in number of listeners and total listens on last.fm, a major music sharing platform.
-- **Observations and Features:** 1466083 rows and 10 columns
-- **Above questions that can be answered:** 1, 2, and 3 can be answered
+- **URL:** [Kaggle](https://www.kaggle.com/miteshsingh/hollywood-music-dataset)
+- **Source:** Data curated by Mitesh Kumar Singh, Mohini Mishra, and Vivek Kumar Sah, students at Stony Brook University
+- **Description:** The dataset contains the title, rank, and spotify popularity of every billboard top 100 song from 1955 to 2012
+- **Observations and Features:** 5301 rows and 6 columns
+- **Above questions that can be answered:** 1, 4, and 5 can be answered
 
 #### Top Spotify songs from 2010-2019
 - **URL:** [Kaggle](https://www.kaggle.com/leonardopena/top-spotify-songs-from-20102019-by-year)

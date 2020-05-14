@@ -21,9 +21,9 @@ questions such as:
 5. How does an individual's music taste change over time?
 
 _Projects related to this domain:_
-1. A Computational Study of Patterned Melodic Structures Across Musical Cultures -This project aims to combine computational analysis and music theory. This will be done to compare music across six cultures, including Indian songs, in order to identify common ground in how music is generated and structured in different cultures.
-2. Hit predicts: Predicting hit song using spotify data - This project use dataset from spotify Web API to predict which song will become billboard Hot 100 hits.
-3. What data science can tell us about mainstream music - This project analyzes the audio features and musical styles from Top 100 Artists on Spotify.
+1. [A Computational Study of Patterned Melodic Structures Across Musical Cultures](http://www.midasmusictheory.org/) -This project aims to combine computational analysis and music theory. This will be done to compare music across six cultures, including Indian songs, in order to identify common ground in how music is generated and structured in different cultures.
+2. [Hit predicts: Predicting hit song using spotify data](https://techxplore.com/news/2019-09-spotify-songs.html) - This project use dataset from spotify Web API to predict which song will become billboard Hot 100 hits.
+3. [What data science can tell us about mainstream music](https://techxplore.com/news/2019-09-spotify-songs.html) - This project analyzes the audio features and musical styles from Top 100 Artists on Spotify.
 
 
 ### Finding Data

@@ -2,9 +2,9 @@
 Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
 ## Project Brainstorm: Music Group
-### Group Members: Kelly Chu, Ruoxue Yan, Reuben Narad, Anika Mishra
-### INFO 201AC Final Project, Spring 2020
-### TA: Bingyan Wang
+#### Group Members: Kelly Chu, Ruoxue Yan, Reuben Narad, Anika Mishra
+#### INFO 201AC Final Project, Spring 2020
+#### TA: Bingyan Wang
 
 ### Domain of Interest
 

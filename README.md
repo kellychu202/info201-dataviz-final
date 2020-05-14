@@ -44,3 +44,12 @@ _Projects related to this domain:_
 - **Observations and Features:** 1466083 rows and 10 columns
 - **Above questions that can be answered:** 1, 2, and 3 can be answered
 
+#### Top Spotify songs from 2010-2019
+ - **URL:** [Kaggle](https://www.kaggle.com/leonardopena/top-spotify-songs-from-20102019-by-year)
+ - **Source:** This dataset is collected by Spotify organized and published by Leonardo Henrique using [this Spotify website](http://organizeyourmusic.playlistmachinery.com/)
+
+- **Observations and Features：** 15 columns and 603 rows
+- **Questions answered using this dataset:**
+  1. How do people's music taste change over years
+  2. who were the most popular music artists over times?
+- **Above questions that can be answered:** 1 can be answered

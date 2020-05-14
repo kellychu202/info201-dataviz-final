@@ -1,5 +1,4 @@
 # Final Project
-Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
 ## Project Brainstorm: Music Group
 #### Group Members: Kelly Chu, Ruoxue Yan, Reuben Narad, Anika Mishra
@@ -45,9 +44,8 @@ _Projects related to this domain:_
 - **Above questions that can be answered:** 1, 2, and 3 can be answered
 
 #### Top Spotify songs from 2010-2019
- - **URL:** [Kaggle](https://www.kaggle.com/leonardopena/top-spotify-songs-from-20102019-by-year)
- - **Source:** This dataset is collected by Spotify organized and published by Leonardo Henrique using [this Spotify website](http://organizeyourmusic.playlistmachinery.com/)
-
+- **URL:** [Kaggle](https://www.kaggle.com/leonardopena/top-spotify-songs-from-20102019-by-year)
+- **Source:** This dataset is collected by Spotify organized and published by Leonardo Henrique using [this Spotify website](http://organizeyourmusic.playlistmachinery.com/)
 - **Observations and Features：** 15 columns and 603 rows
 - **Description:** The dataset contains top songs worldwide based on billboard by year.It includes variables including music genre, music features
 - **Questions answered using this dataset:**

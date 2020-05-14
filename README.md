@@ -49,6 +49,7 @@ _Projects related to this domain:_
  - **Source:** This dataset is collected by Spotify organized and published by Leonardo Henrique using [this Spotify website](http://organizeyourmusic.playlistmachinery.com/)
 
 - **Observations and Features：** 15 columns and 603 rows
+- **Description:** The dataset contains top songs worldwide based on billboard by year.It includes variables including music genre, music features
 - **Questions answered using this dataset:**
   1. How do people's music taste change over years
   2. who were the most popular music artists over times?

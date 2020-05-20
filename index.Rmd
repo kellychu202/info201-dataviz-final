@@ -1,0 +1,12 @@
+---
+title: "Music Group"
+author: "Reuben Narad, Kelly Chu, Anika Mishra, Ruoxue Yan"
+date: "5/20/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is our R markdown file

@@ -9,7 +9,7 @@ library(styler)
 
 # Analysis of spotify top 50 dataset
 top_50_data <- read.csv(
-  "../data/spotify_top50_by_country.csv",
+  "./data/spotify_top50_by_country.csv",
   stringsAsFactors = FALSE
 )
 
@@ -20,14 +20,14 @@ country_summaries <- top_50_data %>%
   filter(!is.na(bpm)) %>%
   group_by(country) %>%
   summarise(
-    avg_bpm = mean(bpm, narm = TRUE), 
+    avg_bpm = mean(bpm, narm = TRUE),
     "Average Energy Level" = mean(nrgy)
-    ) %>%
+  ) %>%
   arrange(desc(avg_bpm))
 country_summaries$country <- factor(
-  country_summaries$country, 
+  country_summaries$country,
   levels = country_summaries$country
-  )
+)
 
 country_bpm_chart <- ggplotly(
   ggplot(data = country_summaries) +

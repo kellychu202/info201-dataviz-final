@@ -8,6 +8,8 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+source("scripts/summary_info_script.R")
+source("scripts/reuben_analysis.R")
 ```
 
 This is our R markdown file
@@ -15,6 +17,5 @@ This is our R markdown file
 
 Reuben's first chart
 ```{r echo=FALSE}
-## not working -> source("./scripts/reuben_analysis.R")
-## country_bpm_chart
+country_summaries
 ```

@@ -1,6 +1,6 @@
 library(dplyr)
 
-dataset <- read.csv("data/spotify_top50_by_country.csv", stringsAsFactors = FALSE)
+dataset <- read.csv("./data/spotify_top50_by_country.csv", stringsAsFactors = FALSE)
 
 get_summary_info <- function(dataset) {
   info <- list()

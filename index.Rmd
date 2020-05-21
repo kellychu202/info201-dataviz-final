@@ -5,8 +5,16 @@ date: "5/20/2020"
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 This is our R markdown file
+
+
+Reuben's first chart
+```{r echo=FALSE}
+## not working -> source("./scripts/reuben_analysis.R")
+## country_bpm_chart
+```

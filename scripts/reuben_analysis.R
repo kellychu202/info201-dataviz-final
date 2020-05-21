@@ -6,7 +6,7 @@ library(maps)
 library(plotly)
 library(leaflet)
 #Analysis of spotify top 50 dataset
-top_50_data <- read.csv("../data/spotify_top50_by_country.csv")
+top_50_data <- read.csv("./data/spotify_top50_by_country.csv")
 
 leaflet() %>%
   addProviderTiles("CartoDB.Positron")

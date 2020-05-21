@@ -14,8 +14,14 @@ source("scripts/reuben_analysis.R")
 
 This is our R markdown file
 
+### Introduction
+
+Our domain of interest is music. We're hoping to visualize information about the music industry and visualize the information in a way that allows a user to learn more about their music taste. 
+
+### Summary
+There are `r summary$number_rows` of rows in our dataset(Top 50 Spitify songs by each country). Overall, `r summary$loudest_song` is the loudest song, `r summary$song_highest_energy` is the song with the highest energy level. Songs come from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs come from `r summary$max_loudness_country` has the loudest value.  
 
 Reuben's first chart
 ```{r echo=FALSE}
-country_summaries
+country_bpm_chart
 ```

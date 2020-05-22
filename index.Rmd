@@ -10,25 +10,44 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 source("scripts/summary_info_script.R")
 source("scripts/reuben_analysis.R")
-source("scripts/us_2010_analysis.R")
+source("scripts/world_2010s_analysis.R")
+source("scripts/aggregate_table_script.R")
 ```
 
 This is our R markdown file
 
 ### Introduction
 
-Our domain of interest is music. We're hoping to visualize information about the music industry and visualize the information in a way that allows a user to learn more about their music taste. 
+- **describe dataset (use from brainstorm)**
+
+Our domain of interest is music. We're hoping to visualize information about trends in the music industry to allow viewers to learn more about how their music preferences compare. Additionally, we hope to discover and showcase patterns in music that becomes popular. 
 
 ### Summary
 There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country). Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Songs from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest value.  
 
-Reuben's first chart
+### Aggregate Table by Genre
+
+```{R echo=FALSE}
+kable(aggregate_table(top_2010s), col.names = c("Genre","Popularity (0 to 100)", "BPM", "Energy","Dance-ability", "Liveliness") )
+```
+
+Organized by genre and sorted from greatest to least popularity score, this table contains the average data for each category. This table reveals that there are no clear patterns or correlations between these measurements and popularity. For example, beats per minute is relatively high on both ends of the popularity scale. Energy also seems patternless. However, the average measurements may indicate the general "recipe" for popular songs instead of the correlation amongst genres stats and popularity. 
+
+### Charts
+
+- **describe purpose of each chart!**
+
+#### Country BPM Chart
+
 ```{r echo=FALSE}
 country_bpm_chart
 ```
 
-Top Genres in the US from the Last Decade 
+**reason/justifications for chart and summary of data**
+
+#### Top Genres in the US from the Last Decade 
+
 ```{r, echo=FALSE}
-top2010_pie_chart(us_top2010)
+top2010_pie_chart(world_top2010)
 ```
-This pie chart was included to show the breakdown of music trends over the past decade. Using angles and colors to highlight the quantitative information, this visual displays the range in popularity of music genres. This graph shows that dance pop and pop fittingly dominated the genres of the most popular songs in the 2010s. Following pop, EDM and hip hop were the next most popular respectively. Although having the third greatest percentages, misc. indicates the total number of songs of genres that had fewer than 4 total hit songs over the given years.
+This pie chart was intended to show the breakdown of music trends over the past decade through the relationship between genre and popularity. Using angles and colors to highlight the quantitative information, this visual displays the range in popularity of music genres. This graph shows that dance pop and pop fittingly dominated the genres of the most popular songs in the 2010s. Following pop, EDM and hip hop were the next most popular respectively. Although having the third greatest percentages, misc. indicates the total number of songs of genres that had fewer than 4 total hit songs over the given years.

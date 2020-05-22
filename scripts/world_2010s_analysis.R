@@ -11,7 +11,7 @@ library(stringr)
 library(styler)
 library(lintr)
 
-us_top2010 <- read.csv("./data/top_2010s.csv", stringsAsFactors = FALSE)
+world_top2010 <- read.csv("./data/top_2010s.csv", stringsAsFactors = FALSE)
 
 top2010_pie_chart <- function(dataset) {
   # sum all the unique genres

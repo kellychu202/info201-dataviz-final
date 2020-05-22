@@ -12,9 +12,6 @@ top_50_data <- read.csv(
   stringsAsFactors = FALSE
 )
 
-leaflet() %>%
-  addProviderTiles("CartoDB.Positron")
-
 country_summaries <- top_50_data %>%
   filter(!is.na(bpm)) %>%
   group_by(country) %>%
@@ -32,12 +29,17 @@ country_bpm_chart <- ggplotly(
   ggplot(data = country_summaries) +
     geom_bar(
       mapping = aes(
-        x = country, y = avg_bpm, fill = `Average Energy Level`, text = country
-      ), stat = "identity",
+        x = country, y = avg_bpm, fill = `Average Energy Level`,
+        text = paste0(toupper(country), ", BPM = ", avg_bpm)
+      ), stat = "identity", color = "white", size = .1,
       width = 1
     ) +
     coord_cartesian(ylim = c(105, 140)) +
-    theme(axis.text.x = element_blank()) +
+    theme_minimal() +
+    theme(axis.text.x = element_blank(),
+          panel.grid.major.x = element_blank(),
+          panel.grid.major.y = element_line( size=.1, color="gray" )) +
+    ggtitle("Average Speed and Energy of Top 50 Songs by Country") +
     xlab("Country (hover to view)") +
     ylab("Average BPM"),
   tooltip = "text"

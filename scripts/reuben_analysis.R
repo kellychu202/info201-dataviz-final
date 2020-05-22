@@ -1,7 +1,6 @@
 library(dplyr)
 library(ggplot2)
 library(lintr)
-library(mapdata)
 library(maps)
 library(plotly)
 library(leaflet)

@@ -10,6 +10,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 source("scripts/summary_info_script.R")
 source("scripts/reuben_analysis.R")
+source("scripts/us_2010_analysis.R")
 ```
 
 This is our R markdown file
@@ -19,9 +20,15 @@ This is our R markdown file
 Our domain of interest is music. We're hoping to visualize information about the music industry and visualize the information in a way that allows a user to learn more about their music taste. 
 
 ### Summary
-There are `r summary$number_rows` of rows in our dataset(Top 50 Spitify songs by each country). Overall, `r summary$loudest_song` is the loudest song, `r summary$song_highest_energy` is the song with the highest energy level. Songs come from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs come from `r summary$max_loudness_country` has the loudest value.  
+There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country). Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Songs from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest value.  
 
 Reuben's first chart
 ```{r echo=FALSE}
 country_bpm_chart
 ```
+
+Top Genres in the US from the Last Decade 
+```{r, echo=FALSE}
+top2010_pie_chart(us_top2010)
+```
+This pie chart was included to show the breakdown of music trends over the past decade. Using angles and colors to highlight the quantitative information, this visual displays the range in popularity of music genres. This graph shows that dance pop and pop fittingly dominated the genres of the most popular songs in the 2010s. Following pop, EDM and hip hop were the next most popular respectively. Although having the third greatest percentages, misc. indicates the total number of songs of genres that had fewer than 4 total hit songs over the given years.

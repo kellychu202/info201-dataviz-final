@@ -20,7 +20,8 @@ This is our R markdown file
 
 - **describe dataset (use from brainstorm)**
 
-Our domain of interest is music. We're hoping to visualize information about trends in the music industry to allow viewers to learn more about how their music preferences compare. Additionally, we hope to discover and showcase patterns in music that becomes popular. 
+Our domain of interest is music. We visualized information about trends in the music industry to allow viewers to learn more about how their music preferences compare. Additionally, we hope to discover and showcase patterns in music that becomes popular. 
+For musicians, it is critical to unerstand what aspects of music lead to commercial success. Many factors, including speed, genre, dancability, and energy play a role in the likelihood that a song will "hit." This analysis can also be used to help a prospective musician make choices about the type of music to produce, if they wish to gain popularity. 
 
 ### Summary
 There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country). Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Songs from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest value.  

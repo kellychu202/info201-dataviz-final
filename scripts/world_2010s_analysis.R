@@ -49,7 +49,7 @@ top2010_pie_chart <- function(dataset) {
     textinfo = "label+percent",
     insidetextfont = list(color = "#FFFFFF"),
     hoverinfo = "text+percent",
-    text = ~ paste("Genre:", genre, "<br>", "Count:", total)
+    text = ~ paste("Genre:", genre, "<br>", "Song Count:", total)
   ) %>%
     layout(title = "Popular Genres 2010-2019")
   return(genre_2010s)

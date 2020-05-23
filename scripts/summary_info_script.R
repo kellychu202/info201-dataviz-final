@@ -1,16 +1,15 @@
 library(dplyr)
 
-dataset <- read.csv("./data/spotify_top50_by_country.csv", stringsAsFactors = FALSE)
+dataset <- read.csv("./data/spotify_top50_by_country.csv",
+                    stringsAsFactors = FALSE)
 
 get_summary_info <- function(dataset) {
   info <- list()
-  
   CapStr <- function(y) {
     c <- strsplit(y, " ")[[1]]
-    paste(toupper(substring(c, 1,1)), substring(c, 2),
-          sep="", collapse=" ")
+    paste(toupper(substring(c, 1, 1)), substring(c, 2),
+          sep = "", collapse = " ")
   }
-  
   info$number_rows <- nrow(dataset)
   info$loudest_song <- dataset %>%
     filter(!is.na(dB)) %>%
@@ -36,6 +35,5 @@ get_summary_info <- function(dataset) {
     CapStr()
   return(info)
 }
-
 
 summary <- get_summary_info(dataset)

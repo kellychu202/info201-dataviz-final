@@ -25,7 +25,8 @@ Our domain of interest is music. We visualized information about trends in the m
 For musicians, it is critical to unerstand what aspects of music lead to commercial success. Many factors, including speed, genre, dancability, and energy play a role in the likelihood that a song will "hit." This analysis can also be used to help a prospective musician make choices about the type of music to produce, if they wish to gain popularity. 
 
 ## Summary
-There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country). Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Songs from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest value.  
+There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country). Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Knowing how a loud song and or high energy song sounds like will give insights to musicians on different song features. 
+Songs from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest value. From the two data above, we can understand music characteristics certain countries have.
 
 ## Aggregate Table by Genre
 
@@ -70,6 +71,8 @@ parts of the country, so they provide an accurate picture into where most of the
 coming from. To add (for final): more info about music itself beyond BPM.
 
 ```{r, echo=FALSE}
-map
+
+interactive_map
+
 ```
 

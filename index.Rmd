@@ -12,6 +12,7 @@ source("scripts/summary_info_script.R")
 source("scripts/reuben_analysis.R")
 source("scripts/world_2010s_analysis.R")
 source("scripts/aggregate_table_script.R")
+source("scripts/interactive_map_analysis.R")
 ```
 
 This is our R markdown file
@@ -57,3 +58,13 @@ This pie chart was intended to show the breakdown of music trends over the past 
 top2010_pie_chart(world_top2010)
 ```
 
+
+#### A map of the most popular genre in each country with BPM
+
+This interactive map can be looked at in connection to the Country BPM chart, as it
+provides an insight into the most popular genre in each country as well as the country's
+average beats per minute (BPM). The size of each marker is based on the country's position
+relative to other's BPM. Looking at the map, we can see confirm that Brazil does have the
+highest average BPM. Latitude and longitude locations were chosen based off major cities or
+parts of the country, so they provide an accurate picture into where most of the data is likely
+coming from. To add (for final): more info about music itself beyond BPM.

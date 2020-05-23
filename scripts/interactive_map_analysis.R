@@ -67,7 +67,7 @@ genre_by_country_df$longitude <- c(20.277958,
                                    -38.624665
                                    )
 
-leaflet(data = genre_by_country_df) %>%
+interactive_map <- leaflet(data = genre_by_country_df) %>%
   addProviderTiles("CartoDB.Positron") %>%
   addCircles(
     lat = ~latitude,

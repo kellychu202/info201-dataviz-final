@@ -24,12 +24,9 @@ Our domain of interest is music. We visualized information about trends in the m
 For musicians, it is critical to understand what aspects of music lead to commercial success. Many factors, including speed, genre, dancability, and energy play a role in the likelihood that a song will be a "hit." This analysis can also be used to help a prospective musician make choices about the type of music to produce, if they wish to gain popularity. 
 
 ## Summary
-<<<<<<< HEAD
-There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country). Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Knowing how a loud song and or high energy song sounds like will give insights to musicians on different song features. 
-Songs from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest value. From the two data above, we can understand music characteristics certain countries have.
-=======
-There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country), which provides a good range of information. Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Songs from `r summary$max_danceability_country` have the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest volume. These songs with extreme values help showcase the different music elements to the average viewer. 
->>>>>>> 6090e2d5fac3b0d380c2143ad2561934c8de8fe3
+There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country), which provides a good range of information. Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Knowing how a loud song and or high energy song sounds like will give insights to musicians on different song features. 
+Songs from `r summary$max_danceability_country` have the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest volume. From the two values above, we can understand music characteristics certain countries have. All in all, these songs with extreme values help showcase the different music elements to the average viewer. 
+
 
 ## Aggregate Table by Genre
 
@@ -76,12 +73,6 @@ parts of the country, so they provide an accurate picture into where most of the
 coming from. To add (for final): more info about music itself beyond BPM.
 
 ```{r, echo=FALSE}
-<<<<<<< HEAD
-
-interactive_map
-
-=======
 interactive_map(top50_by_country)
->>>>>>> 6090e2d5fac3b0d380c2143ad2561934c8de8fe3
 ```
 

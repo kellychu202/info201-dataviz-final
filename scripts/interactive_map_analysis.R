@@ -7,7 +7,7 @@ library(leaflet)
 library(styler)
 
 
-top50_by_country <- read.csv("./spotify_top50_by_country.csv", stringsAsFactors = FALSE)
+top50_by_country <- read.csv("./data/spotify_top50_by_country.csv", stringsAsFactors = FALSE)
 
 # Function to find the most common string/genre type in top.genre, for a given country
 most_common_string <- function(x) {
@@ -67,7 +67,7 @@ genre_by_country_df$longitude <- c(20.277958,
                                    -38.624665
                                    )
 
-leaflet(data = genre_by_country_df) %>%
+map <- leaflet(data = genre_by_country_df) %>%
   addProviderTiles("CartoDB.Positron") %>%
   addCircles(
     lat = ~latitude,

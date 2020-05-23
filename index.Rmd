@@ -68,3 +68,8 @@ relative to other's BPM. Looking at the map, we can see confirm that Brazil does
 highest average BPM. Latitude and longitude locations were chosen based off major cities or
 parts of the country, so they provide an accurate picture into where most of the data is likely
 coming from. To add (for final): more info about music itself beyond BPM.
+
+```{r, echo=FALSE}
+map
+```
+

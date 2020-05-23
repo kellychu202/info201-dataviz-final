@@ -19,14 +19,17 @@ This is our R markdown file
 
 ## Introduction
 
-- **describe dataset (use from brainstorm)**
+Our domain of interest is music. We visualized information about trends in the music industry to allow viewers to learn more about how their music preferences compare. Additionally, we hope to discover and showcase patterns in music that becomes popular.
 
-Our domain of interest is music. We visualized information about trends in the music industry to allow viewers to learn more about how their music preferences compare. Additionally, we hope to discover and showcase patterns in music that becomes popular. 
-For musicians, it is critical to unerstand what aspects of music lead to commercial success. Many factors, including speed, genre, dancability, and energy play a role in the likelihood that a song will "hit." This analysis can also be used to help a prospective musician make choices about the type of music to produce, if they wish to gain popularity. 
+For musicians, it is critical to understand what aspects of music lead to commercial success. Many factors, including speed, genre, dancability, and energy play a role in the likelihood that a song will be a "hit." This analysis can also be used to help a prospective musician make choices about the type of music to produce, if they wish to gain popularity. 
 
 ## Summary
+<<<<<<< HEAD
 There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country). Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Knowing how a loud song and or high energy song sounds like will give insights to musicians on different song features. 
 Songs from `r summary$max_danceability_country` has the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest value. From the two data above, we can understand music characteristics certain countries have.
+=======
+There are `r summary$number_rows` rows in our dataset (Top 50 Spotify songs by each country), which provides a good range of information. Overall, `r summary$loudest_song` is the loudest song, and `r summary$song_highest_energy` is the song with the highest energy level. Songs from `r summary$max_danceability_country` have the highest average danceability level. Moreover, songs from `r summary$max_loudness_country` have the loudest volume. These songs with extreme values help showcase the different music elements to the average viewer. 
+>>>>>>> 6090e2d5fac3b0d380c2143ad2561934c8de8fe3
 
 ## Aggregate Table by Genre
 
@@ -47,13 +50,15 @@ A bar chart based on speed was chosen over a scatterplot based on speed and ener
 As seen in the chart, the majority of countries group around the 125 BPM area. However, there are clear outliers. Brazil has, on average, the fastest and highest energy music. In contrast, Indonesia has quite slow and calm music. One interesting point is the USA. Although the average BPM is roughly the average of the world, the energy level is the lowest of all the countries. Maybe it has to do with that **good ol' country twang**, or maybe it's Adelle. Regardless, the chart highlights that it's worth looking into.
 
 ```{r echo=FALSE}
-country_bpm_chart
+chart_function(top_50_data)
 ```
 
 
 #### Top Genres in the US from the Last Decade 
 
-This pie chart was intended to show the breakdown of music trends over the past decade through the relationship between genre and popularity. Using angles and colors to highlight the quantitative information, this visual displays the range in popularity of music genres. This graph shows that dance pop and pop fittingly dominated the genres of the most popular songs in the 2010s. Following pop, EDM and hip hop were the next most popular respectively. Although having the third greatest percentages, misc. indicates the total number of songs of genres that had fewer than 4 total hit songs over the given years.
+This pie chart was intended to show the breakdown of music trends over the past decade through the relationship between genre and popularity. Using angles and colors to highlight the quantitative information, this visual displays the range in popularity of music genres. A few genres were combined under broader genre names (ie. Iggy Azaelia from "Austrailian Hip Hop" to "Hip Hop".) 
+
+This graph shows that dance pop and pop fittingly dominated the genres of the most popular songs in the 2010s. Following pop, EDM and hip hop were the next most popular respectively. Although having the third greatest percentage, misc. indicates the total number of songs of genres that had fewer than 4 total hit songs over the given years. Adele in her stand alone genre, "British Soul", had more popular songs in the 2010s than four other listed genres.
 
 ```{r, echo=FALSE}
 top2010_pie_chart(world_top2010)
@@ -71,8 +76,12 @@ parts of the country, so they provide an accurate picture into where most of the
 coming from. To add (for final): more info about music itself beyond BPM.
 
 ```{r, echo=FALSE}
+<<<<<<< HEAD
 
 interactive_map
 
+=======
+interactive_map(top50_by_country)
+>>>>>>> 6090e2d5fac3b0d380c2143ad2561934c8de8fe3
 ```
 

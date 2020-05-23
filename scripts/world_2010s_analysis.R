@@ -34,6 +34,7 @@ top2010_pie_chart <- function(dataset) {
     str_detect(all_genres$genre, "complextro")] <- "edm"
   all_genres$genre[str_detect(all_genres$genre, "indie")] <- "indie"
   all_genres$genre[str_detect(all_genres$genre, "latin")] <- "latin"
+  all_genres$genre[str_detect(all_genres$genre, "dance")] <- "dance pop"
   all_genres$genre[str_detect(all_genres$genre, "pop") &
     all_genres$genre != "dance pop"] <- "pop"
   # outliers are genres with only one top song in a year
@@ -54,4 +55,3 @@ top2010_pie_chart <- function(dataset) {
     layout(title = "Popular Genres 2010-2019")
   return(genre_2010s)
 }
-

@@ -36,9 +36,11 @@ chart_function <- function(df) {
       ) +
       coord_cartesian(ylim = c(105, 140)) +
       theme_minimal() +
-      theme(axis.text.x = element_blank(),
-            panel.grid.major.x = element_blank(),
-            panel.grid.major.y = element_line(size = .1, color = "gray")) +
+      theme(
+        axis.text.x = element_blank(),
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(size = .1, color = "gray")
+      ) +
       ggtitle("Average Speed and Energy of Top 50 Songs by Country") +
       xlab("Country (hover to view)") +
       ylab("Average BPM"),
@@ -46,5 +48,3 @@ chart_function <- function(df) {
   )
   return(country_bpm_chart)
 }
-
-country_bpm_chart <- chart_function(top_50_data)

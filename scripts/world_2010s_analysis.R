@@ -55,4 +55,3 @@ top2010_pie_chart <- function(dataset) {
     layout(title = "Popular Genres 2010-2019")
   return(genre_2010s)
 }
-

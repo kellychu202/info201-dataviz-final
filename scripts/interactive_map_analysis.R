@@ -6,15 +6,10 @@ library(plotly)
 library(leaflet)
 library(styler)
 
-
-<<<<<<< HEAD
-top50_by_country <- read.csv("./data/spotify_top50_by_country.csv", stringsAsFactors = FALSE)
-=======
 top50_by_country <- read.csv(
-  "./data/spotify_top50_by_country.csv",
+  "../data/spotify_top50_by_country.csv",
   stringsAsFactors = FALSE
 )
->>>>>>> 6090e2d5fac3b0d380c2143ad2561934c8de8fe3
 
 # Function to find the most common string/genre type in top.genre,
 # for a given country
@@ -33,18 +28,8 @@ interactive_map <- function(dataset) {
       average_bpm = mean(bpm)
     )
 
-<<<<<<< HEAD
 
 
-interactive_map <- leaflet(data = genre_by_country_df) %>%
-  addProviderTiles("CartoDB.Positron") %>%
-  addCircles(
-    lat = ~latitude,
-    lng = ~longitude,
-    stroke = FALSE,
-    radius = ~average_bpm*2000,
-    popup = ~most_common_genre
-=======
   # Manually adding latitude/longitude data for each country in the df.
   genre_by_country_df$latitude <- c(
     6.887755,
@@ -89,7 +74,7 @@ interactive_map <- leaflet(data = genre_by_country_df) %>%
     -3.680031,
     -77.023774,
     -38.624665
->>>>>>> 6090e2d5fac3b0d380c2143ad2561934c8de8fe3
+
   )
 
   interactive_map <- leaflet(data = genre_by_country_df) %>%

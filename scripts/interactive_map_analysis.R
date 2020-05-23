@@ -7,7 +7,7 @@ library(leaflet)
 library(styler)
 
 top50_by_country <- read.csv(
-  "../data/spotify_top50_by_country.csv",
+  "./data/spotify_top50_by_country.csv",
   stringsAsFactors = FALSE
 )
 
@@ -27,7 +27,6 @@ interactive_map <- function(dataset) {
       most_common_genre = most_common_string(top.genre),
       average_bpm = mean(bpm)
     )
-
 
 
   # Manually adding latitude/longitude data for each country in the df.

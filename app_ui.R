@@ -16,7 +16,16 @@ page_one <- tabPanel (
 
 page_two <- tabPanel(
   "First Interactive Page",
-  h1("Interactive plot 1")
+  sidebarLayout(
+    sidebarPanel(
+      h1("Interactive plot 1")
+    ),
+    mainPanel(
+      tags$p(
+        id = "page_2_header",
+        "Reuben claims this page keep out")
+    )
+  )
 )
 
 page_three <- tabPanel(

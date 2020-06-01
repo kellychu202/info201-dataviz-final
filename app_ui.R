@@ -20,7 +20,16 @@ page_two <- tabPanel(
     sidebarPanel(
       tags$div(
         id = "page_2_sidebar",
-      h1("Interactive plot 1")
+      h1("Interactive plot 1"),
+      selectInput(
+        inputId = "scatter_column_selector",
+        label = "Category Selector",
+        c(
+          "Country/Region" = "country",
+          "Genre" = "genre"
+        )
+      ),
+      textOutput(outputId = "scatter_column")
       )
     ),
     mainPanel(

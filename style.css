@@ -22,5 +22,8 @@
 
 
 #page_2_sidebar {
-  background-color: #4b2e83;
+  background-color: #85754d;
+  color: white;
+  border-width: 5;
+  border-color: white;
 }

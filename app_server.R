@@ -7,6 +7,8 @@ source("scripts/reuben_analysis.R")
 
 
 server <- function(input, output){
-  output$scatterplot <- renderPlot({
+  output$scatterplot <- renderText({
+    text <- input$scatter_country_selector
+    return(text)
   })
 }

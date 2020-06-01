@@ -25,7 +25,7 @@ page_two <- tabPanel(
         inputId = "scatter_country_selector",
         label = "Country Selector",
         c(
-          "world" = "world",
+          "World" = "world",
           "Africa" = "africa",
           "Argentina" = "argentina",
           "Australia" = "australia",
@@ -47,7 +47,7 @@ page_two <- tabPanel(
           "Malasya" = "malasya"
         )
       ),
-      textOutput(outputId = "scatter_column")
+      textOutput(outputId = "scatterplot")
       )
     ),
     mainPanel(

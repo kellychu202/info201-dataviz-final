@@ -2,12 +2,11 @@
 library(plotly)
 library(shiny)
 
-
 page_one <- tabPanel (
   "Introduction and Overview",
   sidebarLayout(
     sidebarPanel(
-      h1("Intro Content")
+      h2("Intro Content")
     ),
     mainPanel(
       p("Main panel content")
@@ -35,12 +34,15 @@ page_five <- tabPanel(
   h1("Analysis time boys")
 )
 
-ui <- navbarPage(
-  "Music Analysis",
-  page_one,
-  page_two,
-  page_three,
-  page_four,
-  page_five
+ui <- fluidPage(
+  includeCSS("style.css"),
+  navbarPage(
+    "Music Analysis",
+    page_one,
+    page_two,
+    page_three,
+    page_four,
+    page_five
+  )
 )
 

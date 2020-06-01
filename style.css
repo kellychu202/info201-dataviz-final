@@ -1,0 +1,15 @@
+/**feel free to change colors/format!!**/
+
+.navbar-default{
+  background: steelBlue;
+}
+
+.navbar-default .navbar-brand{
+    color: white;
+    size: 18px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  
+}

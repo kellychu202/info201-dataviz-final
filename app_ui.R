@@ -21,12 +21,30 @@ page_two <- tabPanel(
       tags$div(
         id = "page_2_sidebar",
       h1("Interactive plot 1"),
-      selectInput(
-        inputId = "scatter_column_selector",
-        label = "Category Selector",
+      checkboxGroupInput(
+        inputId = "scatter_country_selector",
+        label = "Country Selector",
         c(
-          "Country/Region" = "country",
-          "Genre" = "genre"
+          "world" = "world",
+          "Africa" = "africa",
+          "Argentina" = "argentina",
+          "Australia" = "australia",
+          "Belgium" = "belgium",
+          "Bolivia" = "bolivia",
+          "Brazil" = "brazil",
+          "Canada" = "canada",
+          "Germany" = "germany",
+          "Columbia" = "colombia",
+          "Chile" = "chile",
+          "Spain" = "spain",
+          "USA" = "usa",
+          "France" = "france",
+          "India" = "india",
+          "Indonesia" = "indonesia",
+          "Israel" = "israel",
+          "Italy" = "italy",
+          "Japan" = "japan",
+          "Malasya" = "malasya"
         )
       ),
       textOutput(outputId = "scatter_column")

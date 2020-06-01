@@ -2,12 +2,11 @@
 library(dplyr)
 library(shiny)
 library(plotly)
+library(ggplot2)
 source("scripts/reuben_analysis.R")
 
 
 server <- function(input, output){
-  output$scatter_column <- renderText({
-   list <- input$scatter_column_selector
-   return(list)
+  output$scatterplot <- renderPlot({
   })
 }

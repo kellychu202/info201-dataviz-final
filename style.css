@@ -1,22 +1,26 @@
 /**feel free to change colors/format!!**/
 
 .navbar-default{
-  background: steelBlue;
+  background: #4b2e83;
 }
 
 .navbar-default .navbar-brand{
-    color: white;
+    color: #b7a57a;
     size: 18px;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: white;
+  color: #ffffff;
+  font-weight: 900;
   
 }
 
 #page_2_header {
-  color: #00ff00;
+  color: #b7a57a;
   font-family: "Lucida Console", Courier, monospace;
 }
 
 
+#page_2_sidebar {
+  background-color: #4b2e83;
+}

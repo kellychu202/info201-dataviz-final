@@ -18,7 +18,10 @@ page_two <- tabPanel(
   "First Interactive Page",
   sidebarLayout(
     sidebarPanel(
+      tags$div(
+        id = "page_2_sidebar",
       h1("Interactive plot 1")
+      )
     ),
     mainPanel(
       tags$p(

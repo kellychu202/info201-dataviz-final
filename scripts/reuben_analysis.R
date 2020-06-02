@@ -5,12 +5,38 @@ library(maps)
 library(plotly)
 library(leaflet)
 library(styler)
+library(RColorBrewer)
 
 # Analysis of spotify top 50 dataset
 top_50_data <- read.csv(
   "./data/spotify_top50_by_country.csv",
   stringsAsFactors = FALSE
 )
+
+scatter_function <- function(countries){
+  selected_countries <- top_50_data %>%
+    filter(is.element(country, countries))
+  country_scatterplot <- ggplotly(
+    ggplot(data = selected_countries) +
+    geom_point(
+      mapping = aes(
+        x = bpm,
+        y = nrgy,
+        color = country
+      )
+    ) +
+    scale_color_brewer(palette = "Dark2") +
+    ggtitle("BPM and Energy of Top 50 Songs") +
+    xlab("Speed (Beats Per Minute)") +
+    ylab("Energy Level") +
+    theme_minimal()
+  )
+  return(country_scatterplot)
+}
+
+scatter_function(c("usa", "brazil", "israel", "malasya"))
+
+
 
 chart_function <- function(df) {
   country_summaries <- df %>%

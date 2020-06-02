@@ -7,8 +7,10 @@ source("scripts/reuben_analysis.R")
 
 
 server <- function(input, output){
-  output$scatterplot <- renderText({
-    text <- input$scatter_country_selector
-    return(text)
+  output$scatterplot <- renderPlotly({
+    plot <- scatter_function(input$scatter_country_selector)
+    return(plot)
+    
+    
   })
 }

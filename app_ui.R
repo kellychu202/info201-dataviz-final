@@ -20,10 +20,10 @@ page_two <- tabPanel(
     sidebarPanel(
       tags$div(
         id = "page_2_sidebar",
-      h1("Interactive plot 1"),
+      h1("Choose countries to display"),
       checkboxGroupInput(
         inputId = "scatter_country_selector",
-        label = "Country Selector",
+        label = NULL,
         c(
           "World" = "world",
           "Africa" = "africa",
@@ -46,14 +46,14 @@ page_two <- tabPanel(
           "Japan" = "japan",
           "Malasya" = "malasya"
         )
-      ),
-      textOutput(outputId = "scatterplot")
+      )
       )
     ),
     mainPanel(
       tags$p(
         id = "page_2_header",
-        "Reuben claims this page keep out")
+        "Reuben claims this page keep out"),
+      plotlyOutput(outputId = "scatterplot")
     )
   )
 )

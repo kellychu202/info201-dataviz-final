@@ -20,10 +20,10 @@ page_two <- tabPanel(
     sidebarPanel(
       tags$div(
         id = "page_2_sidebar",
-      h1("Choose countries to display"),
+      h1("Choose Regions to display"),
       checkboxGroupInput(
         inputId = "scatter_country_selector",
-        label = NULL,
+        label = " ",
         c(
           "World" = "world",
           "Africa" = "africa",
@@ -45,15 +45,32 @@ page_two <- tabPanel(
           "Italy" = "italy",
           "Japan" = "japan",
           "Malasya" = "malasya"
-        )
+        ),
+      selected = c("world")
       )
       )
     ),
     mainPanel(
       tags$p(
         id = "page_2_header",
-        "Reuben claims this page keep out"),
-      plotlyOutput(outputId = "scatterplot")
+        "Speed and energy are defining characteristics of songs. As it happens,
+        peoples' preferences for these characteristics is influenced by region.
+        This plot describes the top 50 songs on Spotify in a region by speed and
+        energy level."),
+      tags$p(
+        id = "page_2_header",
+        strong("NOTE-"),
+             ("These data were taken around Christmas time 2019, causing
+             an unusually high popularity of Christmas songs.")),
+      plotlyOutput(outputId = "scatterplot"),
+      tags$div(
+        id = "page_2_header",
+        strong("Notable Outlier Regions:"),
+        p("-The US and Indonesia prefer lower-energy music"),
+        p("-Brail and Japan prefer higher-energy music"),
+        p("-India, Columbia, Israel, and Indonesia prefer slower music"),
+        p("-Brazil prefers", strong("much"), "faster music")
+      )
     )
   )
 )

@@ -76,8 +76,32 @@ page_two <- tabPanel(
 )
 
 page_three <- tabPanel(
-  "Second Interactive Page",
-  h1("Interactive plot 2")
+  "Top Genres of the 2010s",
+  h1("Interactive plot 2"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        "Select a Year",
+        inputId = "selected_year",
+        choices = list(
+          "2010" = "2010",
+          "2011" = "2011",
+          "2012" = "2012",
+          "2013" = "2013",
+          "2014" = "2014",
+          "2015" = "2015",
+          "2016" = "2016",
+          "2017" = "2017",
+          "2018" = "2018",
+          "2019" = "2019")
+      ),
+      selected = c("2010")
+  ),
+  mainPanel(
+    plotlyOutput("piechart")
+    # add chart of songs for the year
+  )
+  )
 )
 
 page_four <- tabPanel(

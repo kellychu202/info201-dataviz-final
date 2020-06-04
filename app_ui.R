@@ -1,7 +1,7 @@
 #a certain UI smell fills the room...
 library(plotly)
 library(shiny)
-
+library(shinyWidgets)
 page_one <- tabPanel (
   "Introduction and Overview",
   sidebarLayout(
@@ -80,7 +80,7 @@ page_three <- tabPanel(
   h1("Interactive plot 2"),
   sidebarLayout(
     sidebarPanel(
-      selectInput(
+      sliderTextInput(
         "Select a Year",
         inputId = "selected_year",
         choices = list(
@@ -93,10 +93,10 @@ page_three <- tabPanel(
           "2016" = "2016",
           "2017" = "2017",
           "2018" = "2018",
-          "2019" = "2019")
+          "2019" = "2019"
+        )
       ),
-      selected = c("2010")
-  ),
+  ), 
   mainPanel(
     plotlyOutput("piechart")
     # add chart of songs for the year

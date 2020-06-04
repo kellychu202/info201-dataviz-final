@@ -106,7 +106,10 @@ page_three <- tabPanel(
 
 page_four <- tabPanel(
   "Third Interactive Page",
-  h1("Interactive plot 3")
+  h1("Genres by Country World Map"),
+  mainPanel(
+    leafletOutput(outputId = "worldmap")
+  )
 )
 
 page_five <- tabPanel(

@@ -37,7 +37,7 @@ scatter_function <- function(countries){
         color = country,
         text = paste(ifelse(country != "israel",
                             paste("Title:", title),
-                            " "),
+                            "Cannot Display Hebrew Characters"),
                      paste("Artist:", artist),
                      paste("Region:", country),
                      sep = "<br>")

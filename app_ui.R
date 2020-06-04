@@ -20,7 +20,7 @@ page_two <- tabPanel(
     sidebarPanel(
       tags$div(
         id = "page_2_sidebar",
-      h1("Choose Regions to display"),
+      h1("Choose Regions to Display"),
       checkboxGroupInput(
         inputId = "scatter_country_selector",
         label = " ",
@@ -106,7 +106,10 @@ page_three <- tabPanel(
 
 page_four <- tabPanel(
   "Third Interactive Page",
-  h1("Interactive plot 3")
+  h1("Genres by Country World Map"),
+  mainPanel(
+    leafletOutput(outputId = "worldmap")
+  )
 )
 
 page_five <- tabPanel(

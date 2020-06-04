@@ -20,7 +20,7 @@ page_two <- tabPanel(
     sidebarPanel(
       tags$div(
         id = "page_2_sidebar",
-      h1("Choose Regions to display"),
+      h1("Choose Regions to Display"),
       checkboxGroupInput(
         inputId = "scatter_country_selector",
         label = " ",

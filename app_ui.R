@@ -6,10 +6,18 @@ page_one <- tabPanel (
   "Introduction and Overview",
   sidebarLayout(
     sidebarPanel(
-      h2("Intro Content")
+      h2("Introduction")
     ),
     mainPanel(
-      p("Main panel content")
+      p("Music is often considered to be a universal language. Given how
+        popular music is worldwide, we wanted to investigate the music
+        industry a little more and create ways for people to learn more
+        about the industry as a whole, answering questions like uniqueness
+        of music taste, genre popularity, and popularity by region of
+        certain genres. This information could help a casual listener,
+        but it could also help a future musician in their quest to
+        demistify and industry that can be hard to break into."),
+      img(src = "spotifytop50.png", height = 200, width = 350)
     )
   )
 )
@@ -140,8 +148,16 @@ page_four <- tabPanel(
 )
 
 page_five <- tabPanel(
-  "Summary Takeaways",
-  h1("Analysis time boys")
+  "Conclusion",
+  mainPanel(
+    p("These visualizations could help someone who is trying to learn more
+      about their music taste, or someone who is trying to break into the
+      music industry. Music taste, by genre, year released, bpm, energy, 
+      and many more variables varies greatly based on country and even by 
+      year. It's hard to even predict going forward a country's music tastes. 
+      However, there are certain genres that are more universally popular,
+      such as different sub genres of pop music.")
+  )
 )
 
 ui <- fluidPage(

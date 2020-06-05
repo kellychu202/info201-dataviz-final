@@ -24,7 +24,7 @@ page_one <- tabPanel (
 )
 
 page_two <- tabPanel(
-  "First Interactive Page",
+  "Speed and Energy by Region",
   sidebarLayout(
     sidebarPanel(
       tags$div(
@@ -94,9 +94,8 @@ page_three <- tabPanel(
     sidebarPanel(
       tags$div(
         id = "sidebar",
-        h2("Top Genres of the 2010s by Year"),
         sliderTextInput(
-          "Choose a Year",
+          h2("Select a Year"),
           inputId = "selected_year",
           choices = list(
             "decade"= "the 2010s",
@@ -135,6 +134,10 @@ page_three <- tabPanel(
       ),
   ), 
   mainPanel(
+    tags$div(
+      id = "purple_title",
+      h1("Top Genres of the 2010s by Year")
+    ),
     tags$p(
       id = "header",
       "People's music preferences are constantly evolving, consequently, 
@@ -226,7 +229,12 @@ page_five <- tabPanel(
     ),
     tags$p(
       id = "header",
-      "textextext"
+      "Over the 2010s, the genres of top songs became more diverse, spanning
+      only 4 different genres at the lowest point to 11 at its peak. Dance
+      Pop and Pop remained the two most popular genres of the decade
+      (55.2% and 22.6% overall, respectively). In terms of total genre make-up,
+      EDM rose in popularity from not on the board in 2010 to 19.4% in 2019,
+      and hip hop saw a general decline from 13.7% in 2010 to 3.23% in 2019."
     ),
     tags$div(
       id = "purple_title",
@@ -234,15 +242,14 @@ page_five <- tabPanel(
     ),
     tags$p(
       id = "header",
-      "textextext"
-    ),
-    p("These visualizations could help someone who is trying to learn more
+      "These visualizations could help someone who is trying to learn more
       about their music taste, or someone who is trying to break into the
       music industry. Music taste, by genre, year released, bpm, energy, 
       and many more variables varies greatly based on country and even by 
       year. It's hard to even predict going forward a country's music tastes. 
       However, there are certain genres that are more universally popular,
-      such as different sub genres of pop music.")
+      such as different sub genres of pop music."
+    )
   )
 )
 

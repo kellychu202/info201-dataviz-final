@@ -39,6 +39,7 @@ consolidate_genres <- function(dataset){
   return(all_genres)
 }
 
+# piechart of genres by year
 genre_year <- function(dataset, selected_year){
   all_genres <- consolidate_genres(dataset)
   # find the genres that correspond to selected year
@@ -53,10 +54,31 @@ genre_year <- function(dataset, selected_year){
     hoverinfo = "text+percent",
     text = ~ paste("Genre:", genre, "<br>", "Song Count:", total)
   ) %>%
-    layout(title = paste("Popular Genres in", selected_year))
+    layout(
+      title = paste("Popular Genres in", selected_year)
+    )
 
   return(genre_by_year)
 }
+
+# corresponding top songs of selected year (genres not cleaned)
+top_songs <- function(dataset, selected_year){
+  if (selected_year == "the 2010s"){
+    songs <- dataset %>%
+      select(
+        "Song" = title, 
+        "Artist" = artist, 
+        "Year" = year, 
+        "Genre*" = top.genre)
+  } else {
+    songs <- dataset %>%
+      filter(year == selected_year) %>%
+      select("Song" = title, "Artist" = artist, "Genre*" = top.genre)
+  }
+  return(songs)
+}
+
+# test <- top_songs(world_top2010, "2012")
 
 # test: genre_year(world_top2010, "2019")
 
@@ -74,12 +96,13 @@ top2010_pie_chart <- function(dataset) {
   genre_2010s <- plot_ly(
     data = genres_2010s, values = ~total, labels = ~genre, type = "pie",
     textposition = "inside",
+    height = 425,
     textinfo = "label+percent",
     insidetextfont = list(color = "#FFFFFF"),
     hoverinfo = "text+percent",
     text = ~ paste("Genre:", genre, "<br>", "Song Count:", total)
   ) %>%
-    layout(title = "Popular Genres 2010-2019")
+    layout(title = "Popular Genres of 2010-2019")
   return(genre_2010s)
 }
 

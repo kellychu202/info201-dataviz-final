@@ -15,14 +15,34 @@
   
 }
 
-#page_2_header {
+.container { 
+  overflow: hidden; 
+} 
+
+#header {
   color: #85754d;
+  size: 12px;
   font-family: "Lucida Console", Courier, monospace;
 }
 
-
-#page_2_sidebar {
+#sidebar {
   color: #4b2e83;
   border-width: 5;
   border-color: white;
+}
+
+
+#p3_piechart {
+  margin-top: 24px;
+}
+
+#second_header {
+  color: #4b2e83;
+  size: 18px;
+  margin-top: 18px;
+}
+
+#fun_facts {
+  margin-top: 64px;
+  color: #4b2e83;
 }

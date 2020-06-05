@@ -19,9 +19,26 @@ server <- function(input, output){
   })
   
   output$piechart <- renderPlotly({
+    if (input$selected_year == "the 2010s"){
+      chart <- top2010_pie_chart(world_top2010)
+    } else {
     chart <- genre_year(world_top2010, input$selected_year)
     return(chart)
+    }
   })
+  
+  output$song_table_title <- renderText({
+    paste("Top Songs of", input$selected_year)
+  })
+  
+  output$table  <- renderTable({
+    songs <- top_songs(world_top2010, input$selected_year)
+    return(songs)
+  }, caption = "*Genres may not correspond directly to those
+  in the chart above. Some are more specific."
+  )
+  
+  
   
   output$worldmap <- renderLeaflet({
     map <- interactive_map(top50_by_country)

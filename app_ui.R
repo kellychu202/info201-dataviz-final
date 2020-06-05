@@ -110,6 +110,14 @@ page_three <- tabPanel(
         ),
         div(
           id = "fun_facts",
+        
+          
+          
+        # i hate how this looks but i can't figure out a way to extend the sidebarpanel to fit 
+        # the entire length of the page
+        # i could put an image instead???
+          
+          
         h4("Fun Facts about this Data:"),
         p("- Adele is the sole contributor to British Soul, 
           which is the 6th most popular genre of the decade"),

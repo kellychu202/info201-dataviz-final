@@ -60,6 +60,10 @@ page_two <- tabPanel(
       )
     ),
     mainPanel(
+      tags$div(
+        id = "header",
+        h1("Speed and Energy Tastes by Region")
+      ),
       tags$p(
         id = "header",
         "Speed and energy are defining characteristics of songs. As it happens,

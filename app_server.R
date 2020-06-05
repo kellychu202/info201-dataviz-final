@@ -10,7 +10,7 @@ library(styler)
 
 source("scripts/reuben_analysis.R")
 source("scripts/world_2010s_analysis.R")
-source("scripts/interactive_map_analysis.R")
+source("scripts/top_50_country_bar.R")
 
 server <- function(input, output){
   output$scatterplot <- renderPlotly({

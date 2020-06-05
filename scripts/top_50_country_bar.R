@@ -7,7 +7,7 @@ library(leaflet)
 library(styler)
 
 top50_by_country <- read.csv(
-  "../data/spotify_top50_by_country.csv",
+  "data/spotify_top50_by_country.csv",
   stringsAsFactors = FALSE
 )
 

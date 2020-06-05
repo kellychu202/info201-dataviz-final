@@ -23,9 +23,9 @@ server <- function(input, output){
     return(chart)
   })
   
-  output$worldmap <- renderLeaflet({
-    map <- interactive_map(top50_by_country)
-    return(map)
+  output$barchart <- renderPlotly({
+    bar <- interactive_bar(input$year)
+    return(bar)
   })
   
 }

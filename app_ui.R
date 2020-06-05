@@ -105,10 +105,37 @@ page_three <- tabPanel(
 )
 
 page_four <- tabPanel(
-  "Third Interactive Page",
-  h1("Genres by Country World Map"),
-  mainPanel(
-    leafletOutput(outputId = "worldmap")
+  "Worldwide popularity of a genre",
+  h1("Number of countries a genre is the most popular"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        "Select a Year",
+        inputId = "year",
+        choices = list(
+          "2001" = "2001", "2002" = "2002", "2004" = "2004", "2006" = "2006",
+          "2008" = "2008", "2009" = "2009", "2010" = "2010", "2011" = "2011",
+          "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
+          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
+      ),
+      selected = c("2019")
+    ),
+    mainPanel(
+      tags$p(
+        id = "page_4_header",
+        "This bar looks at the most popular genres in a given year, based on 
+        Top 50 Charts provided by Spotify, and displays the number of
+        countries where that genre is the most popular. This information
+        could help a budding musician looking to realize what types of music
+        they could focus on for maximum chart success, or what is working
+        based off real data."),
+      tags$p(
+        id = "page_2_header",
+        strong("NOTE-"),
+        ("These data were taken around Christmas time 2019, causing
+             an unusually high popularity of Christmas songs.")),
+      plotlyOutput("barchart")
+    )
   )
 )
 

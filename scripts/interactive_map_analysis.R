@@ -31,7 +31,7 @@ interactive_map <- function(dataset) {
 
   # Manually adding latitude/longitude data for each country in the df.
   genre_by_country_df$latitude <- c(
-    6.887755,
+     6.887755,
     -33.761676,
     -26.609699,
     50.781369,
@@ -87,3 +87,35 @@ interactive_map <- function(dataset) {
     )
   return(interactive_map)
 }
+
+lat_long <- vector(mode="list", length = 20)
+names(lat_long) <- c("africa", "argentina", "australia", "belgium",
+                     "bolivia", "brazil", "canada", "germany",
+                     "colombia", "chile", "spain", "usa", "france",
+                     "india", "indonesia", "israel", "italy", "japan",
+                     "malaysa", "world"
+                     )
+lat_long[[1]] <- c(6.887755, 20.277958)
+lat_long[[2]] <- c(-33.761676, -65.988583)
+lat_long[[3]] <- c(-26.609699, 133.290891)
+lat_long[[4]] <- c(50.781369, 4.416280)
+lat_long[[5]] <- c(-17.246193, -64.838269)
+lat_long[[6]] <- c(-11.558803, -52.636267)
+lat_long[[7]] <- c(57.123296, -110.419892)
+lat_long[[8]] <- c(-33.459535, -70.631214)
+lat_long[[9]] <- c(4.456372, -73.323049)
+lat_long[[10]] <- c(48.601190, 2.354039)
+lat_long[[11]] <- c(50.057343, 9.044510)
+lat_long[[12]] <- c(28.625053, 77.123134)
+lat_long[[13]] <- c(-6.198393, 106.848708)
+lat_long[[14]] <- c(32.078374, 34.776839)
+lat_long[[15]] <- c(41.889017, 12.488693)
+lat_long[[16]] <- c(35.680875, 139.759581)
+lat_long[[17]] <- c(3.097368, 101.680072)
+lat_long[[18]] <- c( 40.406270, -3.680031)
+lat_long[[19]] <- c(38.909920, -77.023774)
+lat_long[[20]] <- c(40.258674, -38.624665)
+
+
+
+

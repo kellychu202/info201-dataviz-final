@@ -208,6 +208,34 @@ page_four <- tabPanel(
 page_five <- tabPanel(
   "Conclusion",
   mainPanel(
+    tags$div(
+      id = "gold_title",
+      h1("Insights")
+    ),
+    tags$div(
+      id = "purple_title",
+      h3("Speed and Energy Tastes by Region")
+    ),
+    tags$p(
+      id = "header",
+      "textextext"
+    ),
+    tags$div(
+      id = "purple_title",
+      h3("The Pie Chart")
+    ),
+    tags$p(
+      id = "header",
+      "textextext"
+    ),
+    tags$div(
+      id = "purple_title",
+      h3("The Bar Chart")
+    ),
+    tags$p(
+      id = "header",
+      "textextext"
+    ),
     p("These visualizations could help someone who is trying to learn more
       about their music taste, or someone who is trying to break into the
       music industry. Music taste, by genre, year released, bpm, energy, 

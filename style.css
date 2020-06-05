@@ -49,4 +49,11 @@
 
 #purple_title {
   color: #4b2e83;
+  font-weight: 3px;
+}
+
+#gold_title {
+  background-color: #85754d;
+  color: white;
+  text-decoration: underline;
 }

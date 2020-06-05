@@ -7,10 +7,18 @@ page_one <- tabPanel (
   "Introduction and Overview",
   sidebarLayout(
     sidebarPanel(
-      h2("Intro Content")
+      h2("Introduction")
     ),
     mainPanel(
-      p("Main panel content")
+      p("Music is often considered to be a universal language. Given how
+        popular music is worldwide, we wanted to investigate the music
+        industry a little more and create ways for people to learn more
+        about the industry as a whole, answering questions like uniqueness
+        of music taste, genre popularity, and popularity by region of
+        certain genres. This information could help a casual listener,
+        but it could also help a future musician in their quest to
+        demistify and industry that can be hard to break into."),
+      img(src = "spotifytop50.png", height = 200, width = 350)
     )
   )
 )
@@ -151,16 +159,51 @@ page_three <- tabPanel(
 )
 
 page_four <- tabPanel(
-  "Third Interactive Page",
-  h1("Genres by Country World Map"),
-  mainPanel(
-    leafletOutput(outputId = "worldmap")
+  "Worldwide popularity of a genre",
+  h1("Number of countries a genre is the most popular"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        "Select a Year",
+        inputId = "year",
+        choices = list(
+          "2001" = "2001", "2002" = "2002", "2004" = "2004", "2006" = "2006",
+          "2008" = "2008", "2009" = "2009", "2010" = "2010", "2011" = "2011",
+          "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
+          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
+      ),
+      selected = c("2019")
+    ),
+    mainPanel(
+      tags$p(
+        id = "page_4_header",
+        "This bar looks at the most popular genres in a given year, based on 
+        Top 50 Charts provided by Spotify, and displays the number of
+        countries where that genre is the most popular. This information
+        could help a budding musician looking to realize what types of music
+        they could focus on for maximum chart success, or what is working
+        based off real data."),
+      tags$p(
+        id = "page_2_header",
+        strong("NOTE-"),
+        ("These data were taken around Christmas time 2019, causing
+             an unusually high popularity of Christmas songs.")),
+      plotlyOutput("barchart")
+    )
   )
 )
 
 page_five <- tabPanel(
-  "Summary Takeaways",
-  h1("Analysis time boys")
+  "Conclusion",
+  mainPanel(
+    p("These visualizations could help someone who is trying to learn more
+      about their music taste, or someone who is trying to break into the
+      music industry. Music taste, by genre, year released, bpm, energy, 
+      and many more variables varies greatly based on country and even by 
+      year. It's hard to even predict going forward a country's music tastes. 
+      However, there are certain genres that are more universally popular,
+      such as different sub genres of pop music.")
+  )
 )
 
 ui <- fluidPage(

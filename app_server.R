@@ -31,18 +31,16 @@ server <- function(input, output){
     paste("Top Songs of", input$selected_year)
   })
   
-  output$table  <- renderTable({
+  output$table <- renderTable({
     songs <- top_songs(world_top2010, input$selected_year)
     return(songs)
   }, caption = "*Genres may not correspond directly to those
   in the chart above. Some are more specific."
   )
-  
-  
-  
-  output$worldmap <- renderLeaflet({
-    map <- interactive_map(top50_by_country)
-    return(map)
+
+  output$barchart <- renderPlotly({
+    bar <- interactive_bar(input$year)
+    return(bar)
   })
   
 }

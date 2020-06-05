@@ -10,7 +10,13 @@ page_one <- tabPanel (
       h2("Introduction")
     ),
     mainPanel(
-      p("Music is often considered to be a universal language. Given how
+      tags$div(
+        id = "gold_title",
+        h1("Popular Music Analysis")
+      ),
+      tags$p(
+      id = "header",
+      "Music is often considered to be a universal language. Given how
         popular music is worldwide, we wanted to investigate the music
         industry a little more and create ways for people to learn more
         about the industry as a whole, answering questions like uniqueness
@@ -221,7 +227,12 @@ page_five <- tabPanel(
     ),
     tags$p(
       id = "header",
-      "textextext"
+      "As seen in the chart, most regions prefer music in the 120-140
+      beats per minute range. However, there are outlier countries like
+      Brazil that prefer faster music, or outliers like Indonesia that
+      prefer sower music. Similarly, some countries like the US prefer
+      lower-energy music. With a broader lense, these data show us that
+      location CAN BE a contributing factor to music preferences."
     ),
     tags$div(
       id = "purple_title",

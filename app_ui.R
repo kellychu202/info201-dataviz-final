@@ -61,7 +61,7 @@ page_two <- tabPanel(
     ),
     mainPanel(
       tags$div(
-        id = "header",
+        id = "purple_title",
         h1("Speed and Energy Tastes by Region")
       ),
       tags$p(

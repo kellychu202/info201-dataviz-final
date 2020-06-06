@@ -43,4 +43,8 @@ server <- function(input, output){
     return(bar)
   })
   
+  output$barchart2 <- renderPlotly({
+    bar2 <- interactive_bar(input$year2)
+    return(bar2)
+  })
 }

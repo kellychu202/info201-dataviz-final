@@ -173,11 +173,13 @@ page_three <- tabPanel(
   )
 )
 
+
 page_four <- tabPanel(
-  "Worldwide popularity of a genre",
-  h1("Number of countries a genre is the most popular"),
+  "Worldwide Genre Popularity Based on Year Released",
+  h1("Compare two years' releases"),
   sidebarLayout(
     sidebarPanel(
+      
       selectInput(
         "Select a Year",
         inputId = "year",
@@ -187,8 +189,19 @@ page_four <- tabPanel(
           "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
           "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
       ),
-      selected = c("2019")
-    ),
+      selected = c("2019"),
+      
+      selectInput(
+        "Select a Year",
+        inputId = "year2",
+        choices = list(
+          "2001" = "2001", "2002" = "2002", "2004" = "2004", "2006" = "2006",
+          "2008" = "2008", "2009" = "2009", "2010" = "2010", "2011" = "2011",
+          "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
+          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
+      ),
+      selected = c("2010")
+  ),
     mainPanel(
       tags$p(
         id = "page_4_header",
@@ -203,10 +216,12 @@ page_four <- tabPanel(
         strong("NOTE-"),
         ("These data were taken around Christmas time 2019, causing
              an unusually high popularity of Christmas songs.")),
-      plotlyOutput("barchart")
+      plotlyOutput("barchart"),
+      plotlyOutput("barchart2")
     )
   )
 )
+
 
 page_five <- tabPanel(
   "Conclusion",

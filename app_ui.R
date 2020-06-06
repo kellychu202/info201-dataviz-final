@@ -197,11 +197,11 @@ page_three <- tabPanel(
 
 page_four <- tabPanel(
   "Worldwide Genre Popularity",
-  h1("Worldwide Genre Popularity"),
   sidebarLayout(
     sidebarPanel(
       tags$div(
         id = "sidebar",
+        h2("Worldwide Genre Popularity")
       ),
       selectInput(
         "Select a Year",
@@ -242,7 +242,7 @@ page_four <- tabPanel(
       from 2019, the less songs appear relevant and popular on 2019 lists."
       ),
       tags$p(
-        id = "page_2_header",
+        id = "header",
         strong("NOTE-"),
         ("These data were taken around Christmas time 2019, causing
              an unusually high popularity of Christmas songs.")

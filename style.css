@@ -66,3 +66,9 @@
   padding-bottom: 0.03%;
   font-style: italic;
 }
+
+#p1_sidebar {
+  background-color: white;
+  border-width: 0;
+  border-color: white;
+}

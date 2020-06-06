@@ -1,37 +1,48 @@
-#a certain UI smell fills the room...
+# a certain UI smell fills the room...
 library(plotly)
 library(shiny)
 library(shinyWidgets)
+library(styler)
+library(lintr)
 
-page_one <- tabPanel (
+page_one <- tabPanel(
   "Background",
-      tags$div(
-        id = "gold_title",
-        h1("Recipe for Hit Songs?")
-      ),
-      tags$div(
-        id = "text_header",
-        p("Music is often considered to be a universal language. Throughout 
+  tags$div(
+    id = "gold_title",
+    h1("Recipe for Hit Songs?")
+  ),
+  tags$div(
+    id = "text_header",
+    p("Music is often considered to be a universal language. Throughout 
         history, music has been significant to cultures and regions across
         the globe. Given how important music is to many and is constantly
         evolving, we wanted to investigate trends in the current music
         industry and its top hits."),
-        p("This website provides viewers insight on general trends in
+    p("This website provides viewers insight on general trends in
         genre popularity, regional preferences, and popular songs
         across years. While this information could entertain a casual
         listener, it could also help a future musician in their quest to
         demistify an industry that can be hard to break into."),
-        img(src = "streaming.jpg.jpg", height = "98%", width = "98%"),
-        p("In recent years, the emergence and popularity of streaming
+    img(src = "streaming.jpg.jpg", height = "98%", width = "98%"),
+    p("In recent years, the emergence and popularity of streaming
         services have changed the way people consume music, and
         consequently they are shaping the music industry. Streaming
         services allow more access to music than ever before and more
         access to related data. This increase in data and accessibility
         is what enabled the information used for our
         analysis."),
-        img(src = "spotifytop50.png", height = 300, width = 525)
+    sidebarLayout(
+      sidebarPanel(
+        id = "p1_sidebar",
+        p("All data used in our analysis was collected from Spotify,
+            one of the leading music streaming sites.")
+      ),
+      mainPanel(
+        img(src = "spotifytop50.png", height = 300, width = 525),
+        width = 7
       )
-  
+    )
+  )
 )
 
 page_two <- tabPanel(
@@ -40,34 +51,34 @@ page_two <- tabPanel(
     sidebarPanel(
       tags$div(
         id = "sidebar",
-      h2("Choose Regions to Display"),
-      checkboxGroupInput(
-        inputId = "scatter_country_selector",
-        label = " ",
-        c(
-          "World" = "world",
-          "Africa" = "africa",
-          "Argentina" = "argentina",
-          "Australia" = "australia",
-          "Belgium" = "belgium",
-          "Bolivia" = "bolivia",
-          "Brazil" = "brazil",
-          "Canada" = "canada",
-          "Germany" = "germany",
-          "Columbia" = "colombia",
-          "Chile" = "chile",
-          "Spain" = "spain",
-          "USA" = "usa",
-          "France" = "france",
-          "India" = "india",
-          "Indonesia" = "indonesia",
-          "Israel" = "israel",
-          "Italy" = "italy",
-          "Japan" = "japan",
-          "Malasya" = "malasya"
-        ),
-      selected = c("world")
-      )
+        h2("Choose Regions to Display"),
+        checkboxGroupInput(
+          inputId = "scatter_country_selector",
+          label = " ",
+          c(
+            "World" = "world",
+            "Africa" = "africa",
+            "Argentina" = "argentina",
+            "Australia" = "australia",
+            "Belgium" = "belgium",
+            "Bolivia" = "bolivia",
+            "Brazil" = "brazil",
+            "Canada" = "canada",
+            "Germany" = "germany",
+            "Columbia" = "colombia",
+            "Chile" = "chile",
+            "Spain" = "spain",
+            "USA" = "usa",
+            "France" = "france",
+            "India" = "india",
+            "Indonesia" = "indonesia",
+            "Israel" = "israel",
+            "Italy" = "italy",
+            "Japan" = "japan",
+            "Malasya" = "malasya"
+          ),
+          selected = c("world")
+        )
       )
     ),
     mainPanel(
@@ -80,12 +91,14 @@ page_two <- tabPanel(
         "Speed and energy are defining characteristics of songs. As it happens,
         peoples' preferences for these characteristics is influenced by region.
         This plot describes the top 50 songs on Spotify in a region by speed and
-        energy level."),
+        energy level."
+      ),
       tags$p(
         id = "header",
         strong("NOTE-"),
-             ("These data were taken around Christmas time 2019, causing
-             an unusually high popularity of Christmas songs.")),
+        ("These data were taken around Christmas time 2019, causing
+             an unusually high popularity of Christmas songs.")
+      ),
       plotlyOutput(outputId = "scatterplot"),
       tags$div(
         id = "header",
@@ -109,7 +122,7 @@ page_three <- tabPanel(
           h2("Select a Year"),
           inputId = "selected_year",
           choices = list(
-            "decade"= "the 2010s",
+            "decade" = "the 2010s",
             "2010" = "2010",
             "2011" = "2011",
             "2012" = "2012",
@@ -135,44 +148,44 @@ page_three <- tabPanel(
           p("- The number of songs differs each year")
         ),
       ),
-  ), 
-  mainPanel(
-    tags$div(
-      id = "purple_title",
-      h1("Top Genres of the 2010s by Year")
     ),
-    tags$p(
-      id = "header",
-      "People's music preferences are constantly evolving, consequently, 
+    mainPanel(
+      tags$div(
+        id = "purple_title",
+        h1("Top Genres of the 2010s by Year")
+      ),
+      tags$p(
+        id = "header",
+        "People's music preferences are constantly evolving, consequently, 
       so are the types of songs that become popular worldwide. This page shows the
       distribution of genres of the Billboard's top songs for each year in the 2010s.
       By sliding through the years, the different pie charts highlight the changes and
       general trends of popular genres from the last decade. The table below the chart
       lists the titles, artists, and specific genres of the corresponding songs from the
       selected year."
-    ),
-    tags$p(
-      id = "header",
-      strong("NOTE-"),
-      "Some song's genres were edited from the original data to fit under broader
+      ),
+      tags$p(
+        id = "header",
+        strong("NOTE-"),
+        "Some song's genres were edited from the original data to fit under broader
       categories. In the 2010-2019 chart, genres with fewer than 4 top songs were
       categorized under \"misc.\""
-    ),
-    tags$div(
-      id = "p3_piechart",
-      plotlyOutput("piechart"),
-    ),
-    # song table
-    tags$div(
-      id = "second_header",
-      titlePanel(textOutput("song_table_title"))
-    ),
-    div(
-      id = "table",
-      style='height:250px; overflow-y: scroll',
-      tableOutput("table")
+      ),
+      tags$div(
+        id = "p3_piechart",
+        plotlyOutput("piechart"),
+      ),
+      # song table
+      tags$div(
+        id = "second_header",
+        titlePanel(textOutput("song_table_title"))
+      ),
+      div(
+        id = "table",
+        style = "height:250px; overflow-y: scroll",
+        tableOutput("table")
+      )
     )
-  )
   )
 )
 
@@ -192,10 +205,11 @@ page_four <- tabPanel(
           "2001" = "2001", "2002" = "2002", "2004" = "2004", "2006" = "2006",
           "2008" = "2008", "2009" = "2009", "2010" = "2010", "2011" = "2011",
           "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
-          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
+          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019"
+        )
       ),
       selected = c("2019"),
-      
+
       selectInput(
         "Select a Year",
         inputId = "year2",
@@ -203,10 +217,11 @@ page_four <- tabPanel(
           "2001" = "2001", "2002" = "2002", "2004" = "2004", "2006" = "2006",
           "2008" = "2008", "2009" = "2009", "2010" = "2010", "2011" = "2011",
           "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
-          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
+          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019"
+        )
       ),
       selected = c("2010")
-  ),
+    ),
     mainPanel(
       tags$div(
         id = "purple_title",
@@ -219,12 +234,14 @@ page_four <- tabPanel(
       music industry. The bar chart looks at the Top 50s music list from 2019,
       and helps compare what years popular 2019 songs were released. We can see
       that the earlier a song was released, and the further you move away
-      from 2019, the less songs appear relevant and popular on 2019 lists."),
+      from 2019, the less songs appear relevant and popular on 2019 lists."
+      ),
       tags$p(
         id = "page_2_header",
         strong("NOTE-"),
         ("These data were taken around Christmas time 2019, causing
-             an unusually high popularity of Christmas songs.")),
+             an unusually high popularity of Christmas songs.")
+      ),
       plotlyOutput("barchart"),
       plotlyOutput("barchart2")
     )
@@ -293,4 +310,3 @@ ui <- fluidPage(
     page_five
   )
 )
-

@@ -1,4 +1,4 @@
-#Here lies the sever. Travellers beware...
+# Here lies the sever. Travellers beware...
 library(dplyr)
 library(shiny)
 library(plotly)
@@ -12,29 +12,30 @@ source("scripts/reuben_analysis.R")
 source("scripts/world_2010s_analysis.R")
 source("scripts/top_50_country_bar.R")
 
-server <- function(input, output){
+server <- function(input, output) {
   output$scatterplot <- renderPlotly({
     plot <- scatter_function(input$scatter_country_selector)
     return(plot)
   })
-  
+
   output$piechart <- renderPlotly({
-    if (input$selected_year == "the 2010s"){
+    if (input$selected_year == "the 2010s") {
       chart <- top2010_pie_chart(world_top2010)
     } else {
-    chart <- genre_year(world_top2010, input$selected_year)
-    return(chart)
+      chart <- genre_year(world_top2010, input$selected_year)
+      return(chart)
     }
   })
-  
+
   output$song_table_title <- renderText({
     paste("Top Songs of", input$selected_year)
   })
-  
+
   output$table <- renderTable({
-    songs <- top_songs(world_top2010, input$selected_year)
-    return(songs)
-  }, caption = "*Genres may not correspond directly to those
+      songs <- top_songs(world_top2010, input$selected_year)
+      return(songs)
+    },
+    caption = "*Genres may not correspond directly to those
   in the chart above. Some are more specific."
   )
 
@@ -42,7 +43,7 @@ server <- function(input, output){
     bar <- interactive_bar(input$year)
     return(bar)
   })
-  
+
   output$barchart2 <- renderPlotly({
     bar2 <- interactive_bar(input$year2)
     return(bar2)

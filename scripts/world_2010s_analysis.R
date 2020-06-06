@@ -1,9 +1,3 @@
-# proper labels/titles/legends
-# intentional chart type and encoding selection based on the question of
-# interest and data type
-# report: why this chart (what does it express)
-#         what does it reveal
-# rm(list=ls())
 library(dplyr)
 library(ggplot2)
 library(plotly)
@@ -13,12 +7,12 @@ library(lintr)
 
 world_top2010 <- read.csv("./data/top_2010s.csv", stringsAsFactors = FALSE)
 
-consolidate_genres <- function(dataset){
+consolidate_genres <- function(dataset) {
   # consolidate genres
   dataset$top.genre[
     str_detect(dataset$top.genre, "hip") |
       str_detect(dataset$top.genre, "rap")
-    ] <- "hip hop"
+  ] <- "hip hop"
   dataset$top.genre[str_detect(dataset$top.genre, "r&b")] <- "rnb"
   dataset$top.genre[str_detect(dataset$top.genre, "house")] <- "house"
   dataset$top.genre[str_detect(
@@ -31,7 +25,7 @@ consolidate_genres <- function(dataset){
   dataset$top.genre[str_detect(dataset$top.genre, "latin")] <- "latin"
   dataset$top.genre[str_detect(dataset$top.genre, "dance")] <- "dance pop"
   dataset$top.genre[str_detect(dataset$top.genre, "pop") &
-                  dataset$top.genre != "dance pop"] <- "pop"
+    dataset$top.genre != "dance pop"] <- "pop"
   # group by genre and year
   all_genres <- dataset %>%
     group_by(genre = top.genre, year) %>%
@@ -40,7 +34,7 @@ consolidate_genres <- function(dataset){
 }
 
 # piechart of genres by year
-genre_year <- function(dataset, selected_year){
+genre_year <- function(dataset, selected_year) {
   all_genres <- consolidate_genres(dataset)
   # find the genres that correspond to selected year
   summary_genres <- all_genres %>%
@@ -62,14 +56,15 @@ genre_year <- function(dataset, selected_year){
 }
 
 # corresponding top songs of selected year (genres not cleaned)
-top_songs <- function(dataset, selected_year){
-  if (selected_year == "the 2010s"){
+top_songs <- function(dataset, selected_year) {
+  if (selected_year == "the 2010s") {
     songs <- dataset %>%
       select(
-        "Song" = title, 
-        "Artist" = artist, 
-        "Year" = year, 
-        "Genre*" = top.genre)
+        "Song" = title,
+        "Artist" = artist,
+        "Year" = year,
+        "Genre*" = top.genre
+      )
   } else {
     songs <- dataset %>%
       filter(year == selected_year) %>%
@@ -77,10 +72,6 @@ top_songs <- function(dataset, selected_year){
   }
   return(songs)
 }
-
-# test <- top_songs(world_top2010, "2011")
-
-# test: genre_year(world_top2010, "2019")
 
 top2010_pie_chart <- function(dataset) {
   all_genres <- consolidate_genres(dataset)
@@ -105,4 +96,3 @@ top2010_pie_chart <- function(dataset) {
     layout(title = "Popular Genres of 2010-2019")
   return(genre_2010s)
 }
-

@@ -13,7 +13,7 @@ top_50_data <- read.csv(
   stringsAsFactors = FALSE
 )
 
-scatter_function <- function(countries){
+scatter_function <- function(countries) {
   selected_countries <- top_50_data %>%
     filter(is.element(country, countries))
   country_summaries <- top_50_data %>%
@@ -30,26 +30,28 @@ scatter_function <- function(countries){
   )
   country_scatterplot <- ggplotly(
     ggplot(data = selected_countries) +
-    geom_point(
-      mapping = aes(
-        x = bpm,
-        y = nrgy,
-        color = country,
-        text = paste(ifelse(country != "israel",
-                            paste("Title:", title),
-                            "Cannot Display Hebrew Characters"),
-                     paste("Artist:", artist),
-                     paste("Region:", country),
-                     sep = "<br>")
-      ),
-      position = "jitter",
-    ) +
-    #scale_color_brewer(palette = "Dark2") +
-    ggtitle("BPM and Energy of Top 50 Songs") +
-    xlab("Speed (Beats Per Minute)") +
-    ylab("Energy Level") +
-    theme_minimal() +
-    labs(color = "Region"),
+      geom_point(
+        mapping = aes(
+          x = bpm,
+          y = nrgy,
+          color = country,
+          text = paste(ifelse(country != "israel",
+            paste("Title:", title),
+            "Cannot Display Hebrew Characters"
+          ),
+          paste("Artist:", artist),
+          paste("Region:", country),
+          sep = "<br>"
+          )
+        ),
+        position = "jitter",
+      ) +
+      # scale_color_brewer(palette = "Dark2") +
+      ggtitle("BPM and Energy of Top 50 Songs") +
+      xlab("Speed (Beats Per Minute)") +
+      ylab("Energy Level") +
+      theme_minimal() +
+      labs(color = "Region"),
     tooltip = "text"
   )
   return(country_scatterplot)

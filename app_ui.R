@@ -13,7 +13,7 @@ page_one <- tabPanel(
   ),
   tags$div(
     id = "text_header",
-    p("Music is often considered to be a universal language. Throughout 
+    p("Music is often considered to be a universal language. Throughout
         history, music has been significant to cultures and regions across
         the globe. Given how important music is to many and is constantly
         evolving, we wanted to investigate trends in the current music
@@ -138,13 +138,16 @@ page_three <- tabPanel(
         div(
           id = "fun_facts",
           h4("Fun Facts about this Data:"),
-          p("- Adele is the sole contributor to British Soul, 
-          which is the 6th most popular genre of the decade"),
+          p("- Adele is the sole contributor to British Soul,
+            which is the 6th most popular genre of the decade"),
           p("- Pop and Dance Pop's distinction is unclear"),
           p("- Coldplay is Permanent Wave"),
           p("- EDM encompasses \"Complextro\", \"Electro\", \"Electro Pop\",
           \"Electro House\", and \"Big Room\""),
-          p("- 2019 is the only year where Dance Pop isn't the most popular genre"),
+          p(
+            "- 2019 is the only year where Dance Pop isn't the most popular
+            genre"
+          ),
           p("- The number of songs differs each year")
         ),
       ),
@@ -156,20 +159,22 @@ page_three <- tabPanel(
       ),
       tags$p(
         id = "header",
-        "People's music preferences are constantly evolving, consequently, 
-      so are the types of songs that become popular worldwide. This page shows the
-      distribution of genres of the Billboard's top songs for each year in the 2010s.
-      By sliding through the years, the different pie charts highlight the changes and
-      general trends of popular genres from the last decade. The table below the chart
-      lists the titles, artists, and specific genres of the corresponding songs from the
-      selected year."
+        "People's music preferences are constantly evolving,
+        consequently, so are the types of songs that become popular
+        worldwide. This page shows the distribution of genres of the
+        Billboard's top songs for each year in the 2010s. By sliding
+        through the years, the different pie charts highlight the
+        changes and general trends of popular genres from the last
+        decade. The table below the chart lists the titles, artists,
+        and specific genres of the corresponding songs from the
+        selected year."
       ),
       tags$p(
         id = "header",
         strong("NOTE-"),
-        "Some song's genres were edited from the original data to fit under broader
-      categories. In the 2010-2019 chart, genres with fewer than 4 top songs were
-      categorized under \"misc.\""
+        "Some song's genres were edited from the original data to fit
+        under broader categories. In the 2010-2019 chart, genres with
+        fewer than 4 top songs were categorized under \"misc.\""
       ),
       tags$div(
         id = "p3_piechart",
@@ -294,7 +299,7 @@ page_five <- tabPanel(
       from 2019, the less songs appear relevant and popular on 2019 lists.
       We can see that for songs released in 2019, a variety of genres (15) made
       the top 50s, with Latin and pop being the most popular genres.
-      Compared to songs released in the year 2014, only 3 genres 
+      Compared to songs released in the year 2014, only 3 genres
       (Classic Colombian pop, dance pop, and indonesian indie) made it
       to Top 50s lists in 2019. Given that this dataset was from Christmas
       time 2019, the dataset is skewed with a number of Christmas classics

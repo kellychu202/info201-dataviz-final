@@ -4,22 +4,31 @@ library(shiny)
 library(shinyWidgets)
 
 page_one <- tabPanel (
-  "Introduction and Overview",
+  "Background",
       tags$div(
         id = "gold_title",
-        h1("Popular Music Analysis")
+        h1("Recipe for Hit Songs?")
       ),
       tags$div(
         id = "text_header",
-        p("Music is often considered to be a universal language. Given how
-        popular music is worldwide, we wanted to investigate the music
-        industry a little more and create ways for people to learn more
-        about the industry as a whole, answering questions like uniqueness
-        of music taste, genre popularity, and popularity by region of
-        certain genres. This information could help a casual listener,
-        but it could also help a future musician in their quest to
-        demistify and industry that can be hard to break into."),
+        p("Music is often considered to be a universal language. Throughout 
+        history, music has been significant to cultures and regions across
+        the globe. Given how important music is to many and is constantly
+        evolving, we wanted to investigate trends in the current music
+        industry and its top hits."),
+        p("This website provides viewers insight on general trends in
+        genre popularity, regional preferences, and popular songs
+        across years. While this information could entertain a casual
+        listener, it could also help a future musician in their quest to
+        demistify an industry that can be hard to break into."),
         img(src = "streaming.jpg.jpg", height = "98%", width = "98%"),
+        p("In recent years, the emergence and popularity of streaming
+        services have changed the way people consume music, and
+        consequently they are shaping the music industry. Streaming
+        services allow more access to music than ever before and more
+        access to related data. This increase in data and accessibility
+        is what enabled the information used for our
+        analysis."),
         img(src = "spotifytop50.png", height = 300, width = 525)
       )
   
@@ -115,21 +124,15 @@ page_three <- tabPanel(
         ),
         div(
           id = "fun_facts",
-        
-        # i hate how this looks but i can't figure out a way to extend the sidebarpanel to fit 
-        # the entire length of the page
-        # i could put an image instead???
-          
-          
-        h4("Fun Facts about this Data:"),
-        p("- Adele is the sole contributor to British Soul, 
+          h4("Fun Facts about this Data:"),
+          p("- Adele is the sole contributor to British Soul, 
           which is the 6th most popular genre of the decade"),
-        p("- Pop and Dance Pop's distinction is unclear"),
-        p("- Coldplay is Permanent Wave"),
-        p("- EDM encompasses \"Complextro\", \"Electro\", \"Electro Pop\",
+          p("- Pop and Dance Pop's distinction is unclear"),
+          p("- Coldplay is Permanent Wave"),
+          p("- EDM encompasses \"Complextro\", \"Electro\", \"Electro Pop\",
           \"Electro House\", and \"Big Room\""),
-        p("- 2019 is the only year where Dance Pop isn't the most popular genre"),
-        p("- The number of songs differs each year")
+          p("- 2019 is the only year where Dance Pop isn't the most popular genre"),
+          p("- The number of songs differs each year")
         ),
       ),
   ), 

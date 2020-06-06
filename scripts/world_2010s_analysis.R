@@ -78,7 +78,7 @@ top_songs <- function(dataset, selected_year){
   return(songs)
 }
 
-# test <- top_songs(world_top2010, "2012")
+# test <- top_songs(world_top2010, "2011")
 
 # test: genre_year(world_top2010, "2019")
 
@@ -106,4 +106,3 @@ top2010_pie_chart <- function(dataset) {
   return(genre_2010s)
 }
 
-top2010_pie_chart(world_top2010)

@@ -176,11 +176,15 @@ page_three <- tabPanel(
   )
 )
 
+
 page_four <- tabPanel(
-  "Worldwide popularity of a genre",
-  h1("Number of countries a genre is the most popular"),
+  "Worldwide Genre Popularity",
+  h1("Worldwide Genre Popularity"),
   sidebarLayout(
     sidebarPanel(
+      tags$div(
+        id = "sidebar",
+      ),
       selectInput(
         "Select a Year",
         inputId = "year",
@@ -190,26 +194,43 @@ page_four <- tabPanel(
           "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
           "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
       ),
-      selected = c("2019")
-    ),
+      selected = c("2019"),
+      
+      selectInput(
+        "Select a Year",
+        inputId = "year2",
+        choices = list(
+          "2001" = "2001", "2002" = "2002", "2004" = "2004", "2006" = "2006",
+          "2008" = "2008", "2009" = "2009", "2010" = "2010", "2011" = "2011",
+          "2012" = "2012", "2013" = "2013", "2014" = "2014", "2015" = "2015",
+          "2016" = "2016", "2017" = "2017", "2018" = "2018", "2019" = "2019")
+      ),
+      selected = c("2010")
+  ),
     mainPanel(
+      tags$div(
+        id = "purple_title",
+        h1("Compare song relevance in 2019 based on year released")
+      ),
       tags$p(
-        id = "page_4_header",
-        "This bar looks at the most popular genres in a given year, based on 
-        Top 50 Charts provided by Spotify, and displays the number of
-        countries where that genre is the most popular. This information
-        could help a budding musician looking to realize what types of music
-        they could focus on for maximum chart success, or what is working
-        based off real data."),
+        id = "header",
+        "These visualizations could help someone who is trying to learn more
+      about their music taste, or someone who is trying to break into the
+      music industry. The bar chart looks at the Top 50s music list from 2019,
+      and helps compare what years popular 2019 songs were released. We can see
+      that the earlier a song was released, and the further you move away
+      from 2019, the less songs appear relevant and popular on 2019 lists."),
       tags$p(
         id = "page_2_header",
         strong("NOTE-"),
         ("These data were taken around Christmas time 2019, causing
              an unusually high popularity of Christmas songs.")),
-      plotlyOutput("barchart")
+      plotlyOutput("barchart"),
+      plotlyOutput("barchart2")
     )
   )
 )
+
 
 page_five <- tabPanel(
   "Conclusion",
@@ -233,7 +254,7 @@ page_five <- tabPanel(
     ),
     tags$div(
       id = "purple_title",
-      h3("The Pie Chart")
+      h3("Top Genres of the 2010s by Year")
     ),
     tags$p(
       id = "header",
@@ -246,17 +267,17 @@ page_five <- tabPanel(
     ),
     tags$div(
       id = "purple_title",
-      h3("The Bar Chart")
+      h3("Worldwide Genre Popularity")
     ),
     tags$p(
       id = "header",
-      "These visualizations could help someone who is trying to learn more
-      about their music taste, or someone who is trying to break into the
-      music industry. Music taste, by genre, year released, bpm, energy, 
-      and many more variables varies greatly based on country and even by 
-      year. It's hard to even predict going forward a country's music tastes. 
-      However, there are certain genres that are more universally popular,
-      such as different sub genres of pop music."
+      "The bar chart looks at the Top 50s music list from 2019, and helps
+      compare what years popular 2019 songs were released. We can see
+      that the earlier a song was released, and the further you move away
+      from 2019, the less songs appear relevant and popular on 2019 lists.
+      Given that this dataset was from Christmas time 2019, the dataset is
+      skewed with a number of Christmas classics that remain popular for 
+      decades and aren't correlated with release year."
     )
   )
 )

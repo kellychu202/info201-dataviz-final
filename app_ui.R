@@ -272,9 +272,13 @@ page_five <- tabPanel(
       compare what years popular 2019 songs were released. We can see
       that the earlier a song was released, and the further you move away
       from 2019, the less songs appear relevant and popular on 2019 lists.
-      Given that this dataset was from Christmas time 2019, the dataset is
-      skewed with a number of Christmas classics that remain popular for 
-      decades and aren't correlated with release year."
+      We can see that for songs released in 2019, a variety of genres (15) made
+      the top 50s, with Latin and pop being the most popular genres.
+      Compared to songs released in the year 2014, only 3 genres 
+      (Classic Colombian pop, dance pop, and indonesian indie) made it
+      to Top 50s lists in 2019. Given that this dataset was from Christmas
+      time 2019, the dataset is skewed with a number of Christmas classics
+      that remain popular for decades and aren't correlated with release year."
     )
   )
 )

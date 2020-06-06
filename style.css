@@ -43,6 +43,16 @@
   color: #4b2e83;
 }
 
+#text_header{
+  color: #85754d;
+  size: 12px;
+  font-family: "Lucida Console", Courier, monospace;
+  margin-top: 24px;
+  margin-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 24px;
+}
+
 #purple_title {
   color: #4b2e83;
   font-weight: 3px;
@@ -51,5 +61,8 @@
 #gold_title {
   background-color: #85754d;
   color: white;
-  text-decoration: underline;
+  padding-left: 12px;
+  padding-top: 0.1%;
+  padding-bottom: 0.01px;
+  font-style: italic;
 }

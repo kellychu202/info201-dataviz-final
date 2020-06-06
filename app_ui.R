@@ -5,18 +5,13 @@ library(shinyWidgets)
 
 page_one <- tabPanel (
   "Introduction and Overview",
-  sidebarLayout(
-    sidebarPanel(
-      h2("Introduction")
-    ),
-    mainPanel(
       tags$div(
         id = "gold_title",
         h1("Popular Music Analysis")
       ),
-      tags$p(
-      id = "header",
-      "Music is often considered to be a universal language. Given how
+      tags$div(
+        id = "text_header",
+        p("Music is often considered to be a universal language. Given how
         popular music is worldwide, we wanted to investigate the music
         industry a little more and create ways for people to learn more
         about the industry as a whole, answering questions like uniqueness
@@ -24,9 +19,10 @@ page_one <- tabPanel (
         certain genres. This information could help a casual listener,
         but it could also help a future musician in their quest to
         demistify and industry that can be hard to break into."),
-      img(src = "spotifytop50.png", height = 200, width = 350)
-    )
-  )
+        img(src = "streaming.jpg.jpg", height = "98%", width = "98%"),
+        img(src = "spotifytop50.png", height = 300, width = 525)
+      )
+  
 )
 
 page_two <- tabPanel(
@@ -120,8 +116,6 @@ page_three <- tabPanel(
         div(
           id = "fun_facts",
         
-          
-          
         # i hate how this looks but i can't figure out a way to extend the sidebarpanel to fit 
         # the entire length of the page
         # i could put an image instead???

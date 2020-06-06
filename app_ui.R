@@ -179,6 +179,9 @@ page_four <- tabPanel(
   h1("Worldwide Genre Popularity"),
   sidebarLayout(
     sidebarPanel(
+      tags$div(
+        id = "sidebar",
+      ),
       selectInput(
         "Select a Year",
         inputId = "year",
@@ -207,7 +210,7 @@ page_four <- tabPanel(
         h1("Compare song relevance in 2019 based on year released")
       ),
       tags$p(
-        id = "page_4_header",
+        id = "header",
         "These visualizations could help someone who is trying to learn more
       about their music taste, or someone who is trying to break into the
       music industry. The bar chart looks at the Top 50s music list from 2019,

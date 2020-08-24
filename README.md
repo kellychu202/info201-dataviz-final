@@ -1,5 +1,5 @@
-# Info 201: Final Project
-*Cloned from Informatics 201: Technical Foundations final group project repo*
+# Info 201: Final Project*
+**Cloned from Informatics 201: Technical Foundations final group project repo*
 ## Project Topic: Music Trends
 #### Group Members: Kelly Chu, Ruoxue Yan, Reuben Narad, Anika Mishra
 #### INFO 201AC Final Project, Spring 2020

@@ -1,6 +1,8 @@
 # Info 201: Final Project*
 **Cloned from Informatics 201: Technical Foundations final group project repo*
+
 [Final Website](https://kchu.shinyapps.io/AC2-musictrends/)
+
 [Mid-Point Deliverable](https://kellychu202.github.io/info201-dataviz-final/)
 ## Project Topic: Music Trends
 #### Group Members: Kelly Chu, Ruoxue Yan, Reuben Narad, Anika Mishra

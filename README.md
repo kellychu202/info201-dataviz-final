@@ -1,5 +1,7 @@
 # Info 201: Final Project*
-**Cloned from Informatics 201: Technical Foundations final group project repo*
+*__*Cloned from Informatics 201: Technical Foundations, final group project repo__*
+
+*Programmed in R, HTML, and CSS*
 
 [Final Website](https://kchu.shinyapps.io/AC2-musictrends/)
 
